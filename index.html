@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essentials</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="source.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <ul>
+            <h1 id="Logo">Essentials</h1>
+            <li onclick="homeSection()"><a href="#Home">Home</a></li>
+            <li onclick="productsSection()"><a href="#Products">Products</a></li>
+            <li onclick="cartSection()"><a href="#Cart">Cart</a>
+            <li id="btn-login-navbar"><a href="#Login" onclick="loginPage()">Login</a></li>    
+        </ul>
+    </nav>
+    <div class="hero" id="hero">
+        <div class="heroText">
+            <h1>Winter</h1>
+            <h1>Essentials.</h1>
+        </div>
+        <button id="btn-explore" onclick="productsSection()">Explore</button>
+    </div>
+    <div id="products-container">
+        <h2>Products</h2>
+        <div id="category-filter">
+            <button onclick="filterProducts('allProducts')">All products</button>
+            <button onclick="filterProducts('electronics')">Electronics</button>
+            <button onclick="filterProducts('jewelery')">Jewelery</button>
+            <button onclick="filterProducts('men\'s clothing')">Men's Clothing</button>
+            <button onclick="filterProducts('women\'s clothing')">Women's Clothing</button>
+        </div>
+        <div id="products"></div>
+    </div>
+
+    <!-- Cart section -->
+     <div id="cart-section">
+        <h2>Your Cart</h2>
+        <table>
+            <tr id="cart-description">
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+        </table>
+            <div id="cart-product">
+                <p id="cart-product-empty">Your cart is empty</p>
+            </div>
+        <div id="cart-total-price">
+            <p>Total</p>
+            <p id="totalPrice">$0.00</p>
+        </div>
+        <div id = "btn-checkout-cancel">
+            <button onclick="cartCheckout()">Checkout</button>
+            <button onclick="cartContinueShopping()">Continue Shopping</button>
+        </div>
+     </div>
+</body>
+</html>
